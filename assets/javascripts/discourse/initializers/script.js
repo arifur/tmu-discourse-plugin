@@ -1,5 +1,5 @@
 export default {
-    name: "log",
+    name: "tmulog",
     initialize() {
       console.log('from tmu plugin');
     },

@@ -3,3 +3,4 @@
 # version: 0.0.1
 # authors: Arifur Rahman
 # url: https://github.com/arifur/tmu-discourse-plugin.git
+enabled_site_settings :tmu_mattress_preferences_enabled

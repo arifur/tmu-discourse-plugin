@@ -1,0 +1,4 @@
+plugins:
+ tmu_mattress_preferences_enabled:
+  enabled: true
+  client: true

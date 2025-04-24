@@ -1,4 +1,4 @@
 plugins:
- tmu_mattress_preferences_enabled:
-  enabled: true
-  client: true
+  tmu_discourse_plugin_enabled:
+    default: true
+    client: true

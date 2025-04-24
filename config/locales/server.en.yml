@@ -1,3 +1,8 @@
-en: 
- site_settings:
-   tmu_mattress_preferences_enabled: "Enable TMU Mattress preferences plugin"
+en:
+  site_settings:
+    tmu_discourse_plugin_enabled: "Enable TMU Discourse Plugin"
+  tmu_discourse_plugin:
+    mattress_preferences:
+      label: "Mattress Preferences"
+      placeholder: "Enter your mattress preferences here..."
+      instructions: "Share any preferences regarding mattress type, firmness, or other comfort factors you might have."

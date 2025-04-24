@@ -1,0 +1,18 @@
+.mattress-preferences {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mattress-preferences-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-low);
+}
+
+.mattress-preferences .instructions {
+  color: var(--primary-medium);
+  font-size: 0.9em;
+  margin-top: 5px;
+}

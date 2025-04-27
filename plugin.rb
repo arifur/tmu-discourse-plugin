@@ -8,6 +8,7 @@ enabled_site_setting :tmu_discourse_plugin_enabled
 
 after_initialize do
   require_dependency 'user'
+  require_dependency 'users_controller'
   
   # Add mattress_preferences as a custom user field
   User.register_custom_field_type('mattress_preferences', :text)
@@ -26,5 +27,21 @@ after_initialize do
   
   # Whitelist mattress_preferences for edits
   register_editable_user_custom_field(:mattress_preferences)
+  
+  # Whitelist mattress_preferences in the UsersController
+  UsersController.class_eval do
+    alias_method :original_update, :update
+
+    def update
+      if params[:user].present? && params[:user][:custom_fields].present?
+        custom_fields = params[:user][:custom_fields]
+        if custom_fields.key?('mattress_preferences')
+          @user.custom_fields['mattress_preferences'] = custom_fields['mattress_preferences']
+          @user.save_custom_fields(true)
+        end
+      end
+      original_update
+    end
+  end
 end
 

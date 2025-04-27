@@ -5,3 +5,4 @@ en:
         label: "Mattress Preferences"
         placeholder: "Enter your mattress preferences here..."
         instructions: "Share any preferences regarding mattress type, firmness, or other comfort factors you might have."
+        submit: "Submit Preferences"

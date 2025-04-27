@@ -1,9 +1,15 @@
 {{#if showMattressPreferences}}
   <div class="control-group mattress-preferences">
     <label class="control-label">{{i18n "tmu_discourse_plugin.mattress_preferences.label"}}</label>
+    
     <div class="controls">
-      {{textarea value=model.custom_fields.mattress_preferences class="mattress-preferences-input" placeholder=(i18n "tmu_discourse_plugin.mattress_preferences.placeholder")}}
+      {{textarea value=mattressPreferences class="mattress-preferences-input" placeholder=(i18n "tmu_discourse_plugin.mattress_preferences.placeholder")}}
       <div class="instructions">{{i18n "tmu_discourse_plugin.mattress_preferences.instructions"}}</div>
+      <button {{action "saveMattressPreferences"}} class="btn btn-primary save-mattress-preferences">
+        
+        {{i18n "tmu_discourse_plugin.mattress_preferences.submit"}}
+      </button>
     </div>
+    
   </div>
 {{/if}}

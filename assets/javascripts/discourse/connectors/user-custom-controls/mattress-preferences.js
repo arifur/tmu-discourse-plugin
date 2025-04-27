@@ -10,11 +10,20 @@ export default {
   },
 
   actions: {
-    save() {
-      // Ensure this field is saved by adding it to saveAttrNames
-      if (this.saveAttrNames) {
-        this.saveAttrNames.pushObject("custom_fields");
+    saveMattressPreferences() {
+      const model = this.get("args.model");
+      if (!model.custom_fields) {
+        model.set("custom_fields", {});
+      }
+      
+      // Ensure the mattress_preferences is saved to the model
+      const value = this.get("mattressPreferences");
+      model.set("custom_fields.mattress_preferences", value);
+      
+      // Make sure Discourse knows this field should be saved
+      if (model.save) {
+        model.save(["custom_fields"]);
       }
     }
   }
-};
+}
